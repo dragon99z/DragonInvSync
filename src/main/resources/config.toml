@@ -1,0 +1,17 @@
+# Config File for InvSync
+
+[general]
+syncDelay = 5
+
+# Settings that apply regardless of database used
+[database]
+name = "InvSync"
+# Allowed Values: mysql
+type = "mysql"
+
+[mysql]
+address = "127.0.0.1"
+port = 3306
+username = "user"
+password = "pass"
+debug = false

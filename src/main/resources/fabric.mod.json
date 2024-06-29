@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "dragoninvsyncfabric",
+  "version": "${version}",
+  "name": "DragonInvSyncFabric",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/drago/DragonInvSyncFabric"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/dragoninvsync/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "de.dragon99z.dragoninvsync.DragonInvSync"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "DragonInvSync.mixins.json",
+      "environment": "server"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

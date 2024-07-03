@@ -53,9 +53,9 @@ public class Sync {
         String invHash = "";
         
         try (Statement st = MySQL.con.createStatement();
-             ResultSet rs = st.executeQuery("SELECT InventoryHash FROM PlayerSync WHERE UUID='" + uuid + "'")) {
+             ResultSet rs = st.executeQuery("SELECT Inventory FROM PlayerSync WHERE UUID='" + uuid + "'")) {
             if (rs.next()) {
-                invHash = rs.getString("InventoryHash");
+                invHash = rs.getString("Inventory");
             }
         }
 
@@ -94,9 +94,9 @@ public class Sync {
         String armorHash = "";
         
         try (Statement st = MySQL.con.createStatement();
-             ResultSet rs = st.executeQuery("SELECT ArmorHash FROM PlayerSync WHERE UUID='" + uuid + "'")) {
+             ResultSet rs = st.executeQuery("SELECT Armor FROM PlayerSync WHERE UUID='" + uuid + "'")) {
             if (rs.next()) {
-                armorHash = rs.getString("ArmorHash");
+                armorHash = rs.getString("Armor");
             }
         }
 

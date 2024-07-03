@@ -127,7 +127,7 @@ public class PlayerHash {
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             ObjectOutputStream dataOutput = new ObjectOutputStream(outputStream);
 
-            dataOutput.writeInt(p.server.getAdvancementLoader().getAdvancements().size());
+            //dataOutput.writeInt(p.server.getAdvancementLoader().getAdvancements().size());
 
             for (AdvancementEntry advancement : p.server.getAdvancementLoader().getAdvancements()) {
                 AdvancementProgress progress = p.getAdvancementTracker().getProgress(advancement);
@@ -184,7 +184,7 @@ public class PlayerHash {
         ByteArrayInputStream inputStream = new ByteArrayInputStream(Base64Coder.decodeLines(data));
         ObjectInputStream dataInput = new ObjectInputStream (inputStream);
 
-        for (int i = 0; i < dataInput.readInt(); i++) {
+        for (int i = 0; i < p.server.getAdvancementLoader().getAdvancements().size(); i++) {
             boolean done = dataInput.readBoolean();
             AdvancementEntry advancementEntry =  Iterables.get(p.server.getAdvancementLoader().getAdvancements(),i);
 

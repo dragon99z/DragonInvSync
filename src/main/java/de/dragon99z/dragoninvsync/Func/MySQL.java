@@ -23,24 +23,14 @@ public class MySQL {
             LOGGER.error("Invalid MySQL configuration - Stopping");
             return;
         }
-
         String url = String.format("jdbc:mysql://%s:%d/%s?useUnicode=true&characterEncoding=utf8&useSSL=false&autoReconnect=true",
                 config.mysql.address, config.mysql.port, config.database.name);
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(url, config.mysql.username, config.mysql.password);
             LOGGER.info("MySQL connected!");
         } catch (Exception e) {
             LOGGER.error("Could not connect to MySQL{}", config.mysql.debug ? ": " + e : "!");
-        } finally {
-            if (con != null) {
-                try {
-                    con.close();
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                }
-            }
         }
     }
 

@@ -1,5 +1,8 @@
 # DragonInvSync
-![environment-server](https://img.shields.io/badge/environment-server-blue) ![modloader-fabric](https://img.shields.io/badge/modloader-fabric-blue)
+![environment-server](https://img.shields.io/badge/environment-server-blue) ![modloader-fabric](https://img.shields.io/badge/modloader-fabric-blue) ![Modrinth Downloads](https://img.shields.io/modrinth/dt/VCaphsLy?color=blue) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/dragon99z/DragonInvSync/total?color=blue)
+
+
+
 
 ## Why you want to use this mod
 It can synchronize the playerdata across a server network
